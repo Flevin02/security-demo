@@ -3,3 +3,13 @@ server:
 spring:
   main:
     banner-mode: off
+  datasource:
+    url: jdbc:mysql://43.136.232.129:3306/security_db?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: mysqlpwd
+mybatis-plus:
+  global-config:
+    banner: off
+  configuration:
+    map-underscore-to-camel-case: true
