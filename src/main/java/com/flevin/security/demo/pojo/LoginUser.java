@@ -1,6 +1,7 @@
-package com.flevin.security.demo.entity;
+package com.flevin.security.demo.pojo;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import com.flevin.security.demo.pojo.entity.User;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;

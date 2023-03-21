@@ -1,18 +1,16 @@
 package com.flevin.security.demo.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.flevin.security.demo.entity.LoginUser;
-import com.flevin.security.demo.entity.User;
+import com.flevin.security.demo.mapper.MenuMapper;
 import com.flevin.security.demo.mapper.UserMapper;
-import com.flevin.security.demo.util.RedisCache;
+import com.flevin.security.demo.pojo.LoginUser;
+import com.flevin.security.demo.pojo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,7 +24,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
     private UserMapper userMapper;
 
     @Autowired
-    private RedisCache redisCache;
+    private MenuMapper menuMapper;
 
     @Override
     public UserDetails loadUserByUsername(String username)
@@ -42,9 +40,9 @@ public class UserDetailServiceImpl implements UserDetailsService {
         }
 
         // 根据用户名查询权限信息并添加到LoginUser中
-        List<String> authorities = new ArrayList<>(Arrays.asList("hello", "add"));
+        List<String> authorities = menuMapper.getPermsByUserId(1L);
 
         // 封装成UserDetails对象返回
-        return new LoginUser(user,authorities);
+        return new LoginUser(user, authorities);
     }
 }

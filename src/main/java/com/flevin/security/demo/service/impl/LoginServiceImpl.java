@@ -1,7 +1,7 @@
 package com.flevin.security.demo.service.impl;
 
-import com.flevin.security.demo.entity.LoginUser;
-import com.flevin.security.demo.entity.User;
+import com.flevin.security.demo.pojo.LoginUser;
+import com.flevin.security.demo.pojo.entity.User;
 import com.flevin.security.demo.service.LoginService;
 import com.flevin.security.demo.util.JwtUtil;
 import com.flevin.security.demo.util.RedisCache;

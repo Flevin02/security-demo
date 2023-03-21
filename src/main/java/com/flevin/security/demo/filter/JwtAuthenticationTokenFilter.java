@@ -1,6 +1,6 @@
 package com.flevin.security.demo.filter;
 
-import com.flevin.security.demo.entity.LoginUser;
+import com.flevin.security.demo.pojo.LoginUser;
 import com.flevin.security.demo.util.JwtUtil;
 import com.flevin.security.demo.util.RedisCache;
 import io.jsonwebtoken.Claims;

@@ -1,4 +1,4 @@
-package com.flevin.security.demo.util;
+package com.flevin.security.demo.config;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.parser.ParserConfig;

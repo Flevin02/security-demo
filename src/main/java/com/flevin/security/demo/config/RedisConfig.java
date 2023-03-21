@@ -1,6 +1,5 @@
 package com.flevin.security.demo.config;
 
-import com.flevin.security.demo.util.FastJsonRedisSerializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;

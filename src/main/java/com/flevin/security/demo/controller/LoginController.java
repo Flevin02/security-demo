@@ -1,6 +1,6 @@
 package com.flevin.security.demo.controller;
 
-import com.flevin.security.demo.entity.User;
+import com.flevin.security.demo.pojo.entity.User;
 import com.flevin.security.demo.service.LoginService;
 import com.flevin.security.demo.web.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
