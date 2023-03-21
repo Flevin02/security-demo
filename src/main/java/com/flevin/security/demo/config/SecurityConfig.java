@@ -53,7 +53,10 @@ public class SecurityConfig {
                         // 请求放开
                         // 把登录接口放行(允许匿名访问登录接口)
                         .antMatchers("/user/login")
-                        .anonymous() // 只有未登录的人才能访问
+                        // 只有未登录的人才能访问
+                        .anonymous()
+                        .antMatchers("/demo/hello")
+                        .hasAuthority("admin")
                         // 除了上述的接口可以匿名访问,其他地址的访问均需验证权限
                         .anyRequest().authenticated())
                 //配置自定义的JwtAuthenticationToken这个过滤器的位置
